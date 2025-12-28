@@ -7,6 +7,26 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue').EffectScope
+  const IconEpBrush: typeof import('~icons/ep/brush').default
+  const IconEpConnection: typeof import('~icons/ep/connection').default
+  const IconEpDataLine: typeof import('~icons/ep/data-line').default
+  const IconEpDocument: typeof import('~icons/ep/document').default
+  const IconEpDocumentCopy: typeof import('~icons/ep/document-copy').default
+  const IconEpDownload: typeof import('~icons/ep/download').default
+  const IconEpFiles: typeof import('~icons/ep/files').default
+  const IconEpGrid: typeof import('~icons/ep/grid').default
+  const IconEpInfoFilled: typeof import('~icons/ep/info-filled').default
+  const IconEpList: typeof import('~icons/ep/list').default
+  const IconEpMonitor: typeof import('~icons/ep/monitor').default
+  const IconEpOdometer: typeof import('~icons/ep/odometer').default
+  const IconEpPieChart: typeof import('~icons/ep/pie-chart').default
+  const IconEpSetUp: typeof import('~icons/ep/set-up').default
+  const IconEpSetting: typeof import('~icons/ep/setting').default
+  const IconEpTools: typeof import('~icons/ep/tools').default
+  const IconEpTrendCharts: typeof import('~icons/ep/trend-charts').default
+  const IconEpView: typeof import('~icons/ep/view').default
+  const IconMdiCloudOutline: typeof import('~icons/mdi/cloud-outline').default
+  const IconMdiKeyboard: typeof import('~icons/mdi/keyboard').default
   const asyncComputed: typeof import('@vueuse/core').asyncComputed
   const autoResetRef: typeof import('@vueuse/core').autoResetRef
   const computed: typeof import('vue').computed
@@ -88,6 +108,7 @@ declare global {
   const refWithControl: typeof import('@vueuse/core').refWithControl
   const resolveComponent: typeof import('vue').resolveComponent
   const resolveRef: typeof import('@vueuse/core').resolveRef
+  const resolveUnref: typeof import('@vueuse/core').resolveUnref
   const shallowReactive: typeof import('vue').shallowReactive
   const shallowReadonly: typeof import('vue').shallowReadonly
   const shallowRef: typeof import('vue').shallowRef

@@ -11,13 +11,17 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AppTopMenu: typeof import('./../../components/AppTopMenu/AppTopMenu.vue')['default']
-    ElAside: typeof import('element-plus/es')['ElAside']
-    ElContainer: typeof import('element-plus/es')['ElContainer']
-    ElHeader: typeof import('element-plus/es')['ElHeader']
-    ElMain: typeof import('element-plus/es')['ElMain']
+    AppSidebar: typeof import('./../../components/AppSidebar/AppSidebar.vue')['default']
+    ElBadge: typeof import('element-plus/es')['ElBadge']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    IconEpDataLine: typeof import('~icons/ep/data-line')['default']
+    IconMdiCloudOutline: typeof import('~icons/mdi/cloud-outline')['default']
+    IconMdiMenuClose: typeof import('~icons/mdi/menu-close')['default']
+    IconMdiMenuOpen: typeof import('~icons/mdi/menu-open')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
