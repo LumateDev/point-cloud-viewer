@@ -8,7 +8,7 @@ An Electron application with Vue and TypeScript
 
 ## Requirements
 
-- **Node.js**: >= 20.0.0  
+- **Node.js**: >= 20.0.0
   (Required due to usage of `util.styleText` in dependencies like `@iconify/utils`)
 
 ## Project Setup
@@ -25,9 +25,9 @@ npm install
 npm run dev
 ```
 
-> **Note for Linux users**:  
-> If Electron fails to start with a sandbox-related error like:  
-> `The SUID sandbox helper binary was found, but is not configured correctly...`,  
+> **Note for Linux users**:
+> If Electron fails to start with a sandbox-related error like:
+> `The SUID sandbox helper binary was found, but is not configured correctly...`,
 > you need to configure the sandbox binary manually:
 >
 > ```bash
