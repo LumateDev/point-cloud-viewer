@@ -11,7 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AppSidebar: typeof import('./../../components/AppSidebar/AppSidebar.vue')['default']
+    AppSidebar: typeof import('./components/AppSidebar/AppSidebar.vue')['default']
     ElBadge: typeof import('element-plus/es')['ElBadge']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMenu: typeof import('element-plus/es')['ElMenu']

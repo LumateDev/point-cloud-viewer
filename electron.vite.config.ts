@@ -13,7 +13,7 @@ export default defineConfig({
   renderer: {
     resolve: {
       alias: {
-        '@renderer': resolve('src/renderer/src')
+        '@renderer': resolve(__dirname, 'src/renderer/src')
       }
     },
     plugins: [
@@ -26,12 +26,15 @@ export default defineConfig({
             enabledCollections: ['ep', 'mdi']
           })
         ],
-        dts: 'src/renderer/src/auto-imports.d.ts',
+        dts: resolve(__dirname, 'src/renderer/src/auto-imports.d.ts'),
         imports: ['vue', '@vueuse/core'],
-        dirs: ['src/renderer/src/composables', 'src/renderer/src/stores'],
+        dirs: [
+          resolve(__dirname, 'src/renderer/src/composables'),
+          resolve(__dirname, 'src/renderer/src/stores')
+        ],
         eslintrc: {
           enabled: true,
-          filepath: './.eslintrc-auto-import.json',
+          filepath: resolve(__dirname, './.eslintrc-auto-import.json'),
           globalsPropValue: true
         }
       }),
@@ -43,7 +46,7 @@ export default defineConfig({
             enabledCollections: ['ep', 'mdi']
           })
         ],
-        dts: 'src/renderer/src/components.d.ts'
+        dts: resolve(__dirname, 'src/renderer/src/components.d.ts')
       }),
       Icons({
         autoInstall: true,
