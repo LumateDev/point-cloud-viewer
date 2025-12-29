@@ -18,7 +18,6 @@ declare module 'vue' {
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
-    IconEpDataLine: typeof import('~icons/ep/data-line')['default']
     IconMdiCloudOutline: typeof import('~icons/mdi/cloud-outline')['default']
     IconMdiMenuClose: typeof import('~icons/mdi/menu-close')['default']
     IconMdiMenuOpen: typeof import('~icons/mdi/menu-open')['default']
