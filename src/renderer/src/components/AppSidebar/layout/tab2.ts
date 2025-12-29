@@ -1,19 +1,19 @@
-import { MenuItem } from '../types/menu'
+import { MenuItem } from '../types/menu';
 
 export const tab2Menu: MenuItem[] = [
   {
     index: '/tab2/reports',
     title: 'Отчёты',
-    icon: IconEpDocumentCopy
+    icon: IconEpDocumentCopy,
   },
   {
     index: '/tab2/templates',
     title: 'Шаблоны',
-    icon: IconEpFiles
+    icon: IconEpFiles,
   },
   {
     index: '/tab2/tools',
     title: 'Инструменты',
-    icon: IconEpSetUp
-  }
-]
+    icon: IconEpSetUp,
+  },
+];

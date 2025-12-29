@@ -1,6 +1,13 @@
+node_modules/
+dist/
+coverage/
+*.min.js
+*.min.css
+.DS_Store
 out
 dist
 pnpm-lock.yaml
 LICENSE.md
 tsconfig.json
 tsconfig.*.json
+.eslintrc-auto-import.mjs

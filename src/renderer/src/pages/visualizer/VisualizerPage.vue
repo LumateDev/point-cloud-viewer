@@ -1,9 +1,7 @@
 <template>
   <div class="page-container">
     <h2>Визуализатор Облака Точек</h2>
-    <p>
-      Здесь будет реализована логика отображения .las/.laz/.xyz файлов с использованием Three.js.
-    </p>
+    <p>Здесь будет реализована логика отображения .las/.laz/.xyz файлов с использованием Three.js.</p>
     <div id="threejs-container" class="threejs-container">
       <!-- Canvas Three.js будет создан здесь -->
     </div>

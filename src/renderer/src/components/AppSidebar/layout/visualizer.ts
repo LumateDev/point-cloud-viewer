@@ -1,24 +1,24 @@
-import { MenuItem } from '../types/menu'
+import { MenuItem } from '../types/menu';
 
 export const visualizerMenu: MenuItem[] = [
   {
     index: '/visualizer/dashboard',
     title: 'Панель управления',
-    icon: IconEpOdometer
+    icon: IconEpOdometer,
   },
   {
     index: '/visualizer/charts',
     title: 'Графики',
-    icon: IconEpTrendCharts
+    icon: IconEpTrendCharts,
   },
   {
     index: '/visualizer/3d-view',
     title: '3D просмотр',
-    icon: IconEpView
+    icon: IconEpView,
   },
   {
     index: '/visualizer/data-export',
     title: 'Экспорт данных',
-    icon: IconEpDownload
-  }
-]
+    icon: IconEpDownload,
+  },
+];

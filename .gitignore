@@ -1,30 +1,112 @@
+# ================================
 # Зависимости
+# ================================
 node_modules/
-package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
 
+# ================================
 # Билды и артефакты
+# ================================
 dist/
 build/
 out/
 release/
+*.exe
+*.dll
+*.so
+*.dylib
 
+# ================================
 # Environment
+# ================================
 .env
+.env.*.local
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.staging.local
 
+# ================================
 # IDE
-.vscode/
+# ================================
+# JetBrains
 .idea/
-*.swp
-*.swo
+*.iml
+*.iws
+*.ipr
 
-# Runtime data
-.pnp.*
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# ================================
+# Операционные системы
+# ================================
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ================================
+# Логи
+# ================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ================================
+# Тестирование и покрытие
+# ================================
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+
+# ================================
+# Временные файлы
+# ================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.pid
+
+# ================================
+# Прочее
+# ================================
+.serverless/
+*.tgz
+*.tar.gz
+.ssh/
+
+# ================================
+# Кэши и линтеры
+# ================================
+.cache/
+.eslintcache

@@ -5,14 +5,24 @@
     "src/renderer/src/**/*",
     "src/renderer/src/**/*.vue",
     "src/preload/*.d.ts",
-    // --- Добавьте сюда пути к сгенерированным файлам ---
     "src/renderer/src/auto-imports.d.ts",
     "src/renderer/src/components.d.ts"
-    // --- /Добавьте сюда ---
   ],
   "compilerOptions": {
     "composite": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
+    "types": ["vite/client"],
     "paths": {
       "@renderer/*": [
         "src/renderer/src/*"

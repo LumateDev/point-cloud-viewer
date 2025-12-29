@@ -7,9 +7,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import AppSidebar from './components/AppSidebar/AppSidebar.vue'
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .app {

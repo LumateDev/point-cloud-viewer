@@ -1,20 +1,12 @@
 <template>
-  <aside
-    class="sidebar"
-    :class="{ 'sidebar--collapsed': isCollapsed }"
-    :style="{ width: sidebarWidth }"
-  >
+  <aside class="sidebar" :class="{ 'sidebar--collapsed': isCollapsed }" :style="{ width: sidebarWidth }">
     <header class="sidebar__header">
       <div v-if="!isCollapsed" class="sidebar__logo">
         <el-icon class="sidebar__logo-icon"><IconMdiCloudOutline /></el-icon>
         <span class="sidebar__logo-text">Point Cloud Viewer</span>
       </div>
 
-      <button
-        class="sidebar__toggle"
-        :title="isCollapsed ? 'Развернуть' : 'Свернуть'"
-        @click="toggleCollapse"
-      >
+      <button class="sidebar__toggle" :title="isCollapsed ? 'Развернуть' : 'Свернуть'" @click="toggleCollapse">
         <el-icon :size="18">
           <IconMdiMenuOpen v-if="!isCollapsed" />
           <IconMdiMenuClose v-else />
@@ -74,17 +66,17 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import { menuConfig } from './layout/menu'
+import { useRoute } from 'vue-router';
+import { menuConfig } from './layout/menu';
 
-const route = useRoute()
-const isCollapsed = ref(false)
+const route = useRoute();
+const isCollapsed = ref(false);
 
-const activeRoute = computed(() => route.path)
-const sidebarWidth = computed(() => (isCollapsed.value ? '64px' : '240px'))
+const activeRoute = computed(() => route.path);
+const sidebarWidth = computed(() => (isCollapsed.value ? '64px' : '240px'));
 
 function toggleCollapse() {
-  isCollapsed.value = !isCollapsed.value
+  isCollapsed.value = !isCollapsed.value;
 }
 </script>
 <style lang="scss" scoped>

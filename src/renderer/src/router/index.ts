@@ -1,51 +1,51 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router';
 
-import VisualizerPage from '../pages/visualizer/VisualizerPage.vue'
-import Tab1Page from '../pages/tab1/Tab1Page.vue'
-import Tab2Page from '../pages/tab2/Tab2Page.vue'
-import SettingsPage from '../pages/settings/SettingsPage.vue'
-import AboutPage from '../pages/about/AboutPage.vue'
+import VisualizerPage from '../pages/visualizer/VisualizerPage.vue';
+import Tab1Page from '../pages/tab1/Tab1Page.vue';
+import Tab2Page from '../pages/tab2/Tab2Page.vue';
+import SettingsPage from '../pages/settings/SettingsPage.vue';
+import AboutPage from '../pages/about/AboutPage.vue';
 
 const routes = [
   {
     path: '/',
-    redirect: '/visualizer'
+    redirect: '/visualizer',
   },
   {
     path: '/visualizer',
     name: 'Visualizer',
-    component: VisualizerPage
+    component: VisualizerPage,
   },
   {
     path: '/tab1',
     name: 'Tab1',
-    component: Tab1Page
+    component: Tab1Page,
   },
   {
     path: '/tab2',
     name: 'Tab2',
-    component: Tab2Page
+    component: Tab2Page,
   },
   {
     path: '/settings',
     name: 'Settings',
-    component: SettingsPage
+    component: SettingsPage,
   },
   {
     path: '/about',
     name: 'About',
-    component: AboutPage
+    component: AboutPage,
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('../pages/about/AboutPage.vue')
-  }
-]
+    component: () => import('../pages/about/AboutPage.vue'),
+  },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

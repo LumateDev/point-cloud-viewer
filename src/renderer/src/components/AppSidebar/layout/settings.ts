@@ -1,24 +1,24 @@
-import { MenuItem } from '../types/menu'
+import { MenuItem } from '../types/menu';
 
 export const settingsMenu: MenuItem[] = [
   {
     index: '/settings/general',
     title: 'Общие',
-    icon: IconEpTools
+    icon: IconEpTools,
   },
   {
     index: '/settings/network',
     title: 'Сеть',
-    icon: IconEpConnection
+    icon: IconEpConnection,
   },
   {
     index: '/settings/hotkeys',
     title: 'Горячие клавиши',
-    icon: IconMdiKeyboard
+    icon: IconMdiKeyboard,
   },
   {
     index: '/settings/appearance',
     title: 'Внешний вид',
-    icon: IconEpBrush
-  }
-]
+    icon: IconEpBrush,
+  },
+];
