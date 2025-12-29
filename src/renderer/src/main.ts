@@ -3,7 +3,7 @@ import { createPinia } from 'pinia';
 import ElementPlus from 'element-plus';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import 'element-plus/dist/index.css';
-import '@renderer/assets/index.scss';
+import '@renderer/assets/scss/_base.scss';
 import 'normalize.css';
 import router from './router';
 import App from './App.vue';

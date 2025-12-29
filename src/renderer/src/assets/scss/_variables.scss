@@ -1,0 +1,167 @@
+// =============================================================================
+// VARIABLES.SCSS
+// Переменные основанные на Element Plus CSS переменных
+// =============================================================================
+
+// =============================================================================
+// ЦВЕТА
+// =============================================================================
+
+// Основные цвета
+$primary-color: var(--el-color-primary);
+$success-color: var(--el-color-success);
+$warning-color: var(--el-color-warning);
+$danger-color: var(--el-color-danger);
+$error-color: var(--el-color-error);
+$info-color: var(--el-color-info);
+
+// Цвета текста
+$text-primary: var(--el-text-color-primary);
+$text-regular: var(--el-text-color-regular);
+$text-secondary: var(--el-text-color-secondary);
+$text-placeholder: var(--el-text-color-placeholder);
+$text-disabled: var(--el-text-color-disabled);
+
+// Цвета фона
+$bg-color: var(--el-bg-color-page);
+$bg-base: var(--el-bg-color);
+$bg-overlay: var(--el-bg-color-overlay);
+$mask-color: var(--el-mask-color);
+$mask-color-light: var(--el-mask-color-extra-light);
+
+// Цвета границ
+$border-color: var(--el-border-color);
+$border-color-darker: var(--el-border-color-darker);
+$border-color-dark: var(--el-border-color-dark);
+$border-color-light: var(--el-border-color-light);
+$border-color-lighter: var(--el-border-color-lighter);
+$border-color-extra-light: var(--el-border-color-extra-light);
+$border-color-light-grey: var(--border-color-light-grey);
+
+// Цвета заливки
+$fill-color: var(--el-fill-color);
+$fill-color-darker: var(--el-fill-color-darker);
+$fill-color-dark: var(--el-fill-color-dark);
+$fill-color-light: var(--el-fill-color-light);
+$fill-color-lighter: var(--el-fill-color-lighter);
+$fill-color-extra-light: var(--el-fill-color-extra-light);
+$fill-color-blank: var(--el-fill-color-blank);
+
+// =============================================================================
+// РАЗМЕРЫ
+// =============================================================================
+
+// Высота заголовка
+$header-height: 70px;
+
+// Размеры шрифтов
+$font-size-lg: 24px;
+$font-size-md: 18px;
+$font-size-sm: 16px;
+$font-size-xs: 14px;
+
+// Размеры компонентов
+$component-size-base: var(--el-component-size, 40px);
+$component-size-small: var(--el-component-size-small, 32px);
+$component-size-large: var(--el-component-size-large, 48px);
+
+// =============================================================================
+// ОТСТУПЫ
+// =============================================================================
+
+$spacing-xxs: 5px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 40px;
+
+// =============================================================================
+// АНИМАЦИИ
+// =============================================================================
+
+$transition-duration: var(--el-transition-duration, 0.3s);
+$transition-duration-fast: var(--el-transition-duration-fast, 0.2s);
+$transition-duration-slow: var(--el-transition-duration-slow, 2.4s);
+$transition-timing: var(--el-transition-function-ease, ease);
+$transition-timing-linear: var(--el-transition-function-linear, linear);
+$transition-timing-ease-in-out: var(--el-transition-function-ease-in-out, ease-in-out);
+
+// =============================================================================
+// ГРАНИЦЫ
+// =============================================================================
+
+$border-radius: var(--el-border-radius-base, 4px);
+$border-radius-small: var(--el-border-radius-small, 2px);
+$border-radius-round: var(--el-border-radius-round, 20px);
+$border-radius-circle: var(--el-border-radius-circle, 50%);
+$border-width: var(--el-border-width, 1px);
+$border-style: var(--el-border-style, solid);
+
+// =============================================================================
+// ТЕНИ
+// =============================================================================
+
+$shadow-sm: var(--el-box-shadow-lighter);
+$shadow-md: var(--el-box-shadow-light);
+$shadow-lg: var(--el-box-shadow);
+$shadow-xl: var(--el-box-shadow-dark);
+$shadow-extra-sm: var(--shadow-extra-sm);
+
+// =============================================================================
+// Z-INDEX
+// =============================================================================
+
+$z-index-normal: var(--el-index-normal, 1);
+$z-index-dropdown: var(--el-index-dropdown, 1000);
+$z-index-sticky: var(--el-index-sticky, 1020);
+$z-index-fixed: var(--el-index-fixed, 1030);
+$z-index-modal: var(--el-index-modal, 2000);
+$z-index-popover: var(--el-index-popover, 2000);
+$z-index-tooltip: var(--el-index-tooltip, 2000);
+
+// =============================================================================
+// КОМПОНЕНТ-СПЕЦИФИЧНЫЕ ПЕРЕМЕННЫЕ
+// =============================================================================
+
+// Кнопка
+$button-disabled-text-color: var(--el-button-disabled-text-color, rgba(255, 255, 255, 0.5));
+
+// Карточка
+$card-bg-color: var(--el-card-bg-color, var(--el-bg-color-overlay));
+
+// Empty
+$empty-fill-color-0: var(--el-empty-fill-color-0, var(--el-color-black));
+$empty-fill-color-1: var(--el-empty-fill-color-1, #4b4b52);
+$empty-fill-color-2: var(--el-empty-fill-color-2, #36383d);
+$empty-fill-color-3: var(--el-empty-fill-color-3, #1e1e20);
+$empty-fill-color-4: var(--el-empty-fill-color-4, #262629);
+$empty-fill-color-5: var(--el-empty-fill-color-5, #202124);
+$empty-fill-color-6: var(--el-empty-fill-color-6, #212224);
+$empty-fill-color-7: var(--el-empty-fill-color-7, #1b1c1f);
+$empty-fill-color-8: var(--el-empty-fill-color-8, #1c1d1f);
+$empty-fill-color-9: var(--el-empty-fill-color-9, #18181a);
+
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+
+$breakpoint-xs: var(--el-breakpoint-xs, 0);
+$breakpoint-sm: var(--el-breakpoint-sm, 576px);
+$breakpoint-md: var(--el-breakpoint-md, 768px);
+$breakpoint-lg: var(--el-breakpoint-lg, 992px);
+$breakpoint-xl: var(--el-breakpoint-xl, 1200px);
+$breakpoint-xxl: var(--el-breakpoint-xxl, 1400px);
+
+// =============================================================================
+// ДОПОЛНИТЕЛЬНЫЕ ПЕРЕМЕННЫЕ
+// =============================================================================
+
+// Line height
+$line-height: var(--el-line-height, 1.5);
+$line-height-sm: var(--el-line-height-sm, 1.25);
+$line-height-lg: var(--el-line-height-lg, 1.75);
+
+// Disabled opacity
+$disabled-opacity: var(--el-disabled-opacity, 0.5);
