@@ -7,7 +7,7 @@
       </div>
 
       <button class="sidebar__toggle" :title="isCollapsed ? 'Развернуть' : 'Свернуть'" @click="toggleCollapse">
-        <el-icon :size="18">
+        <el-icon :size="24">
           <IconMdiMenuOpen v-if="!isCollapsed" />
           <IconMdiMenuClose v-else />
         </el-icon>
@@ -73,21 +73,19 @@ const route = useRoute();
 const isCollapsed = ref(false);
 
 const activeRoute = computed(() => route.path);
-const sidebarWidth = computed(() => (isCollapsed.value ? '64px' : '240px'));
+const sidebarWidth = computed(() => (isCollapsed.value ? '64px' : '256px'));
 
 function toggleCollapse() {
   isCollapsed.value = !isCollapsed.value;
 }
 </script>
 <style lang="scss" scoped>
-@use 'element-plus/theme-chalk/src/mixins/mixins' as *;
-
 .sidebar {
   display: flex;
   flex-direction: column;
   height: 100vh;
   background-color: var(--el-bg-color);
-  border-right: 1px solid var(--el-border-color-light);
+  box-shadow: 1px 0 0 0 var(--el-border-color-light);
   transition: width 0.3s ease;
 
   /* ---------- header ---------- */
@@ -98,21 +96,22 @@ function toggleCollapse() {
     padding: 0 16px;
     height: 64px;
     flex-shrink: 0;
-    border-bottom: 1px solid var(--el-border-color-lighter);
+    border-bottom: 1px solid var(--el-border-color-light);
   }
 
   &__logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 
     &-icon {
-      font-size: 20px;
+      font-size: 24px;
       color: var(--el-color-primary);
     }
 
     &-text {
       font-size: 16px;
+      line-height: 1.5;
       font-weight: 600;
       color: var(--el-text-color-primary);
       white-space: nowrap;

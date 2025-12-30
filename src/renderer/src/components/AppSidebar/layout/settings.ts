@@ -7,16 +7,6 @@ export const settingsMenu: MenuItem[] = [
     icon: IconEpTools,
   },
   {
-    index: '/settings/network',
-    title: 'Сеть',
-    icon: IconEpConnection,
-  },
-  {
-    index: '/settings/hotkeys',
-    title: 'Горячие клавиши',
-    icon: IconMdiKeyboard,
-  },
-  {
     index: '/settings/appearance',
     title: 'Внешний вид',
     icon: IconEpBrush,
