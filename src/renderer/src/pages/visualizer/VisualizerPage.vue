@@ -15,6 +15,7 @@
 <style lang="scss" scoped>
 .page-container {
   height: 100%;
+  padding: 16px;
   display: flex;
   flex-direction: column;
 }

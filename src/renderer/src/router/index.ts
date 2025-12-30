@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-
 import VisualizerPage from '../pages/visualizer/VisualizerPage.vue';
 import Tab1Page from '../pages/tab1/Tab1Page.vue';
 import Tab2Page from '../pages/tab2/Tab2Page.vue';
-import SettingsPage from '../pages/settings/SettingsPage.vue';
+import AppearancePage from '../pages/settings/AppearancePage.vue';
 import AboutPage from '../pages/about/AboutPage.vue';
+import GeneralSettingsPage from '../pages/settings/GeneralSettingsPage.vue';
 
 const routes = [
   {
@@ -27,9 +27,14 @@ const routes = [
     component: Tab2Page,
   },
   {
-    path: '/settings',
-    name: 'Settings',
-    component: SettingsPage,
+    path: '/settings/appearance',
+    name: 'Appearance',
+    component: AppearancePage,
+  },
+  {
+    path: '/settings/general',
+    name: 'GeneralSettings',
+    component: GeneralSettingsPage,
   },
   {
     path: '/about',

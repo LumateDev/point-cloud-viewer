@@ -134,6 +134,7 @@ export default {
     "until": true,
     "useActiveElement": true,
     "useAnimate": true,
+    "useAppStore": true,
     "useArrayDifference": true,
     "useArrayEvery": true,
     "useArrayFilter": true,

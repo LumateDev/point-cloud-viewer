@@ -1,14 +1,18 @@
 <template>
-  <aside class="sidebar" :class="{ 'sidebar--collapsed': isCollapsed }" :style="{ width: sidebarWidth }">
+  <aside class="sidebar" :class="{ 'sidebar--collapsed': appStore.sidebarCollapsed }" :style="{ width: sidebarWidth }">
     <header class="sidebar__header">
-      <div v-if="!isCollapsed" class="sidebar__logo">
+      <div v-if="!appStore.sidebarCollapsed" class="sidebar__logo">
         <el-icon class="sidebar__logo-icon"><IconMdiCloudOutline /></el-icon>
         <span class="sidebar__logo-text">Point Cloud Viewer</span>
       </div>
 
-      <button class="sidebar__toggle" :title="isCollapsed ? 'Развернуть' : 'Свернуть'" @click="toggleCollapse">
+      <button
+        class="sidebar__toggle"
+        :title="appStore.sidebarCollapsed ? 'Развернуть' : 'Свернуть'"
+        @click="appStore.toggleSidebar"
+      >
         <el-icon :size="24">
-          <IconMdiMenuOpen v-if="!isCollapsed" />
+          <IconMdiMenuOpen v-if="!appStore.sidebarCollapsed" />
           <IconMdiMenuClose v-else />
         </el-icon>
       </button>
@@ -17,7 +21,7 @@
     <el-scrollbar class="sidebar__scrollbar">
       <el-menu
         :default-active="activeRoute"
-        :collapse="isCollapsed"
+        :collapse="appStore.sidebarCollapsed"
         :collapse-transition="false"
         class="sidebar__menu"
         router
@@ -68,16 +72,13 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 import { menuConfig } from './layout/menu';
+import { useAppStore } from '@renderer/stores/app';
 
+const appStore = useAppStore();
 const route = useRoute();
-const isCollapsed = ref(false);
 
 const activeRoute = computed(() => route.path);
-const sidebarWidth = computed(() => (isCollapsed.value ? '64px' : '256px'));
-
-function toggleCollapse() {
-  isCollapsed.value = !isCollapsed.value;
-}
+const sidebarWidth = computed(() => (appStore.sidebarCollapsed ? '64px' : '256px'));
 </script>
 <style lang="scss" scoped>
 .sidebar {
