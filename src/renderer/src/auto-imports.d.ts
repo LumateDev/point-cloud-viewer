@@ -7,6 +7,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue').EffectScope
+  const ElMessage: typeof import('element-plus/es').ElMessage
   const IconEpBrush: typeof import('~icons/ep/brush').default
   const IconEpDocument: typeof import('~icons/ep/document').default
   const IconEpDocumentCopy: typeof import('~icons/ep/document-copy').default
