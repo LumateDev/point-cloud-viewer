@@ -6,8 +6,8 @@ import icon from '../../resources/icon.png?asset';
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 670,
+    width: 1280,
+    height: 820,
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
@@ -55,6 +55,47 @@ app.whenReady().then(() => {
       title: options.title,
     });
     return result;
+  });
+
+  ipcMain.handle(
+    'open-file-dialog',
+    async (
+      _event,
+      options: {
+        title?: string;
+        filters?: Electron.FileFilter[];
+        defaultPath?: string;
+      }
+    ) => {
+      const result = await dialog.showOpenDialog({
+        properties: ['openFile'],
+        title: options.title,
+        filters: options.filters,
+        defaultPath: options.defaultPath,
+      });
+      return result;
+    }
+  );
+
+  ipcMain.handle('read-directory', async (_event, dirPath: string) => {
+    try {
+      const fs = await import('fs/promises');
+      const path = await import('path');
+
+      const entries = await fs.readdir(dirPath, { withFileTypes: true });
+      const files = entries
+        .filter((entry) => entry.isFile())
+        .map((entry) => ({
+          name: entry.name,
+          path: path.join(dirPath, entry.name),
+          extension: path.extname(entry.name).toLowerCase(),
+        }))
+        .filter((file) => ['.xyz', '.las', '.laz'].includes(file.extension));
+
+      return { success: true, files };
+    } catch (error) {
+      return { success: false, error: String(error), files: [] };
+    }
   });
 
   createWindow();

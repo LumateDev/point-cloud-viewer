@@ -3,6 +3,10 @@ import { electronAPI } from '@electron-toolkit/preload';
 
 const api = {
   openDirectoryDialog: (options: { title: string }) => ipcRenderer.invoke('open-directory-dialog', options),
+  openFileDialog: (options: { title?: string; filters?: Electron.FileFilter[]; defaultPath?: string }) =>
+    ipcRenderer.invoke('open-file-dialog', options),
+
+  readDirectory: (dirPath: string) => ipcRenderer.invoke('read-directory', dirPath),
 };
 
 // Use `contextBridge` APIs to expose Electron APIs to
