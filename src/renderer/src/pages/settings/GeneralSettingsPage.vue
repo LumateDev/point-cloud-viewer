@@ -19,7 +19,11 @@
           <span class="setting-desc">Путь к неразмеченным датасетам для испытания нейросети</span>
         </div>
         <div class="path-selector">
-          <el-input v-model="appStore.rawDatasetsPath" placeholder="Выберите папку для сырых датасетов" readonly />
+          <ClearableInput
+            v-model="appStore.rawDatasetsPath"
+            placeholder="Выберите папку для сырых датасетов"
+            @clear="handleClearSuccess('сырых датасетов')"
+          />
           <el-button @click="selectRawDatasetsPath" type="primary" size="small"> Выбрать </el-button>
         </div>
       </div>
@@ -31,10 +35,10 @@
           <span class="setting-desc">Путь к размеченным датасетам для обучения</span>
         </div>
         <div class="path-selector">
-          <el-input
+          <ClearableInput
             v-model="appStore.labeledDatasetsPath"
             placeholder="Выберите папку для размеченных датасетов"
-            readonly
+            @clear="handleClearSuccess('размеченных датасетов')"
           />
           <el-button @click="selectLabeledDatasetsPath" type="primary" size="small"> Выбрать </el-button>
         </div>
@@ -47,10 +51,10 @@
           <span class="setting-desc">Путь к датасетам, распознанным нейросетью</span>
         </div>
         <div class="path-selector">
-          <el-input
+          <ClearableInput
             v-model="appStore.predictedDatasetsPath"
             placeholder="Выберите папку для распознанных датасетов"
-            readonly
+            @clear="handleClearSuccess('распознанных датасетов')"
           />
           <el-button @click="selectPredictedDatasetsPath" type="primary" size="small"> Выбрать </el-button>
         </div>
@@ -61,6 +65,7 @@
 
 <script setup lang="ts">
 import { useAppStore } from '@renderer/stores/app';
+import ClearableInput from '@renderer/components/UI/ClearableInput/ClearableInput.vue';
 
 const appStore = useAppStore();
 
@@ -111,6 +116,10 @@ const selectPredictedDatasetsPath = async () => {
     ElMessage.error('Не удалось выбрать папку для распознанных датасетов');
   }
 };
+
+const handleClearSuccess = (datasetType: string) => {
+  ElMessage.success(`Путь для ${datasetType} очищен`);
+};
 </script>
 
 <style lang="scss" scoped>
@@ -137,9 +146,9 @@ const selectPredictedDatasetsPath = async () => {
     display: flex;
     gap: 8px;
     min-width: 400px;
+    align-items: center;
 
-    .el-input {
-      width: auto;
+    .clearable-input-wrapper {
       flex: 1;
     }
   }
